@@ -57,7 +57,7 @@ The install command will generate a json object of this format:
 }
 ```
 
-To use rubber-duck in Cursor, add this json to `<project root>/.cursor/mcp.json`.
+To use rubber-duck in Cursor, add this json to `<project root>/.cursor/mcp.json`. Go to cursor settings > MCP to see `rubber-duck` installed. You may need to restart Cursor for it to become green.
 
 ## License
 
