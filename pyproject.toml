@@ -1,25 +1,21 @@
-[tool.poetry]
+[project]
 name = "rubber-duck-mcp"
 version = "0.1.0"
-description = "A rubber duck debugging MCP server"
-authors = ["Your Name <your.email@example.com>"]
-packages = [{include = "src"}]
+description = "A rubber duck MCP server"
+authors = [
+    {name = "Francois-Joseph (FJ) Lacroix"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "fastmcp (>=0.4.1,<0.5.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-fastapi = "^0.109.2"
-uvicorn = "^0.27.1"
-pydantic = "^2.6.1"
-python-dotenv = "^1.0.1"
-pyyaml = "^6.0.1"
-httpx = "^0.26.0"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-black = "^24.1.1"
-isort = "^5.13.2"
-mypy = "^1.8.0"
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api" 
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+      "rubber-duck": {
+        "command": "uv",
+        "args": [
+          "run",
+          "--with",
+          "fastmcp",
+          "fastmcp",
+          "run",
+          "C:\\Users\\fjlac\\rubber-duck-mcp\\src\\server.py"
+        ]
+      }
+    }
+  }
