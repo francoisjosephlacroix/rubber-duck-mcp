@@ -22,6 +22,43 @@ The server can be used by connecting to it through the MCP protocol. It's partic
 - Organizing thoughts during development
 - Adding a bit of fun to your debugging process with the squeaky duck feature
 
+## Installation
+
+### Requirements
+- Python 3.10 or higher
+- `uv` package manager
+- `fastmcp` package
+
+To use this rubber duck server with Claude, you'll need to install it using the FastMCP CLI. Run the following command:
+
+```bash
+fastmcp install src/server.py
+```
+
+This will make rubber-duck available to Claude through its MCP configuration file `claude_desktop_config.json`. For more details about Claude Desktop integration, see the [FastMCP documentation](https://github.com/jlowin/fastmcp/blob/main/README.md#claude-desktop-integration-for-regular-use).
+
+The install command will generate a json object of this format:
+
+```json
+{
+    "mcpServers": {
+      "rubber-duck": {
+        "command": "uv",
+        "args": [
+          "run",
+          "--with",
+          "fastmcp",
+          "fastmcp",
+          "run",
+          "<project root>/src/server.py"
+        ]
+      }
+    }
+}
+```
+
+To use rubber-duck in Cursor, add this json to `<project root>/.cursor/mcp.json`.
+
 ## License
 
-MIT License 
+MIT License
